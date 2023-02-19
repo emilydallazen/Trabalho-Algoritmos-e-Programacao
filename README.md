@@ -29,16 +29,16 @@ Descrição das opções:
 6. Sair: finaliza o programa.
 
 Extras:
-Será apreciado o trabalho que ordena os compromissos da agenda por data e hora (sem usar a função sort da lista).
-Será apreciado o trabalho que implementar a agenda utilizando structs. No caso de Python, o uso de classe (class) com os atributos da agenda.
-O trabalho que estiver no Git com commits
+- Será apreciado o trabalho que ordena os compromissos da agenda por data e hora (sem usar a função sort da lista).
+- Será apreciado o trabalho que implementar a agenda utilizando structs. No caso de Python, o uso de classe (class) com os atributos da agenda.
+- O trabalho que estiver no Git com commits
 
 Apresentação:
-O link do Colab contendo o código deverá ser postado no Moodle na tarefa correspondente criada para tal. Verificar se o link é acessível para os professores.
-A apresentação do trabalho será no dia 03/03/2023, no horário de aula da turma.
-A apresentação é individual, mas o trabalho pode ser implementado em duplas. As notas são individuais, ou seja, uma dupla pode receber notas diferentes. A nota considera o trabalho mais as respostas dadas pelo apresentador.
-A avaliação do trabalho considerará:
-A organização do código (10%)
-O uso de funções de forma coerente (30%)
-Comentários em partes importantes do código. Evite comentários desnecessários (10%)
-Atende os requisitos do trabalho (50%)
+- O link do Colab contendo o código deverá ser postado no Moodle na tarefa correspondente criada para tal. Verificar se o link é acessível para os professores.
+- A apresentação do trabalho será no dia 03/03/2023, no horário de aula da turma.
+- A apresentação é individual, mas o trabalho pode ser implementado em duplas. As notas são individuais, ou seja, uma dupla pode receber notas diferentes. A nota considera o trabalho mais as respostas dadas pelo apresentador.
+- A avaliação do trabalho considerará:
+- A organização do código (10%)
+- O uso de funções de forma coerente (30%)
+- Comentários em partes importantes do código. Evite comentários desnecessários (10%)
+- Atende os requisitos do trabalho (50%)
