@@ -13,20 +13,20 @@ Descrição: Jantar de Natal no Palácio do Alvorada
 
 A agenda deverá permitir a inclusão, exclusão, consulta e alteração de compromissos cadastrados. A consulta deverá ser por data (aparecem todos os eventos na data informada) ou por data e hora, aparecem todos os eventos cadastrados na data e hora informados.
 Deverá existir um menu para o usuário escolher a ação sobre a agenda. Por exemplo:
-Incluir
-Consultar
-Alterar
-Excluir
-Listar todos
-Sair
+1. Incluir
+2. Consultar
+3. Alterar
+4. Excluir
+5. Listar todos
+6. Sair
 
 Descrição das opções:
-Incluir: permite que um compromisso seja incluído na agenda. Verificar se já existe um compromisso agendado para a mesma data e horário. 
-Consultar: permite fazer consultas de duas formas: pela data e pela data e hora. No caso de apenas pela data, listar todos os compromissos naquela data. Para data e hora, apenas o compromisso agendado para a data e hora informados. Apresentar a mensagem “Agenda Vazia” caso não existam compromissos para a consulta realizada.
-Alterar: permite alterar a descrição e a duração de um compromisso. O usuário digita a data e hora do compromisso a ser alterado. Apresentar a mensagem “Compromisso não encontrado” caso não exista compromisso para a data e hora informados.
-Excluir: permite excluir um compromisso. A implementação é similar ao da opção Alterar, exceto que o compromisso é excluído da lista.
-Listar todos: lista todos os compromissos da agenda.
-Sair: finaliza o programa.
+1. Incluir: permite que um compromisso seja incluído na agenda. Verificar se já existe um compromisso agendado para a mesma data e horário. 
+2. Consultar: permite fazer consultas de duas formas: pela data e pela data e hora. No caso de apenas pela data, listar todos os compromissos naquela data. Para data e  hora, apenas o compromisso agendado para a data e hora informados. Apresentar a mensagem “Agenda Vazia” caso não existam compromissos para a consulta realizada.
+3. Alterar: permite alterar a descrição e a duração de um compromisso. O usuário digita a data e hora do compromisso a ser alterado. Apresentar a mensagem “Compromisso não encontrado” caso não exista compromisso para a data e hora informados.
+4. Excluir: permite excluir um compromisso. A implementação é similar ao da opção Alterar, exceto que o compromisso é excluído da lista.
+5. Listar todos: lista todos os compromissos da agenda.
+6. Sair: finaliza o programa.
 
 Extras:
 Será apreciado o trabalho que ordena os compromissos da agenda por data e hora (sem usar a função sort da lista).
