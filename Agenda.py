@@ -1,28 +1,19 @@
 
-
-
 #Funções auxiliares: criadas para serem utilizadas dentro das funções dos menus.
-
 def linha():
     print(48*'=')
 
+def agendaVazia():
+   if len(agenda)==0:
+        print('Zero compromissos. Sua agenda está vazia!')
+        return True
+   return False
 
 #usada dentro da funçao Incluir
 def verificaAgenda(listaAgenda, data, hora):
    for evento in listaAgenda:
         if evento['data'] == data and evento['hora']==hora:
             return True
-   return False
-
-
-#usada dentro da função Consultar   
-
-   
-#usada 
-def agendaVazia():
-   if len(agenda)==0:
-        print('Zero compromissos. Sua agenda está vazia!')
-        return True
    return False
       
    
@@ -84,12 +75,8 @@ def Alterar():
         if evento['data']==Alterar_Data and evento['hora']==Alterar_Hora:
             achou=True
             new_descricao=input('Digite a nova descrição: ')
-            new_data=input('Nova data:')
-            new_hora=input('Novo horário: ')
             new_duracao=input('Nova duração: ')
             evento['descricao']=new_descricao
-            evento['data']=new_data
-            evento['hora']=new_hora
             evento['duracao']=new_duracao
             print('O compromisso foi alterado com sucesso!!!')
             print('')
