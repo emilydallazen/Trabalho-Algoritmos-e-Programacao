@@ -27,6 +27,7 @@ def Incluir():
     duracao=input('Duração: ')
     if verificaAgenda(agenda, data, hora):
        print('------Ops, voce já tem compromisso!----')
+       print('')
        return
     #se a função verificaAgenda retornar como True, é porque já existe um compromisso na mesma data e hora. Então não será dado o append do compromisso na lista da agenda.
     else:
@@ -34,6 +35,7 @@ def Incluir():
         #definindo o dicionário Evento, composto por data, hora, duração e descrição.
         agenda.append(evento) #inserindo o evento na agenda.
         print('O compromisso foi marcado com sucesso! :) ')
+        print('')
         
            
 
@@ -50,6 +52,7 @@ def Consultar():
             if evento['data'] == Consultar_Data and evento['hora']==Consultar_Hora:
               achou=True
               print(f"Descrição: {evento['descricao']} \nDuração: {evento['duracao']}")
+              linha()
               break
         if achou == False:
               print('Nenhum compromisso encontrado :(')
@@ -62,6 +65,7 @@ def Consultar():
                 if evento['data']==Consultar_Data:
                     achou=True
                     print(f"Descrição: {evento['descricao']} \nHora: {evento['hora']} \nDuração: {evento['duracao']}")
+                    linha()
             if achou==False:
                 print('Nenhum compromisso encontrado! :( ')
                 print('')
@@ -77,6 +81,7 @@ def Alterar():
     for evento in agenda:
         if evento['data']==Alterar_Data and evento['hora']==Alterar_Hora:
             achou=True
+            linha()
             new_descricao=input('Digite a nova descrição: ')
             new_duracao=input('Nova duração: ')
             evento['descricao']=new_descricao
@@ -106,6 +111,7 @@ def Excluir():
     if indice is not None:
             agenda.pop(indice)    
             print("O compromisso foi excluído da sua agenda com sucesso!")
+            print('')
             return
     if achou==False:
         print('Não encontrei esse compromisso :( ')
@@ -145,8 +151,7 @@ while True:
         break
     else:
         print('Opção inválida!')
-print('*******************FIM******************')
-    
+print('************************FIM***********************')    
   
 
        
