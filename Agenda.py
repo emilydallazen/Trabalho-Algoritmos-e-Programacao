@@ -3,7 +3,7 @@
 def linha():
     print(50*'=')
 
-#adicionado no início de todas as funções do menu, com exceção da função Incluir.
+#adicionado no início de todas as funções do menu, com exceção da função Incluir. 
 def agendaVazia():
    if len(agenda)==0:
         print('Zero compromissos. Sua agenda está vazia!')
@@ -54,7 +54,9 @@ def Consultar():
               print(f"Descrição: {evento['descricao']} \nDuração: {evento['duracao']}")
               linha()
               break
-        if achou == False:
+            #aqui o programa procura por todos os eventos da agenda até achar um que tenha a mesma data e hora informada pelo usuário.
+            #ao encontrar esse evento, ele é mostrado para o usuário e a variável achou se torna True.
+        if achou == False: #caso a variável tenha continuado como Flase, significa que nenhum compromisso foi encontrado com essa data e horário.
               print('Nenhum compromisso encontrado :(')
               print('')
               
@@ -82,9 +84,9 @@ def Alterar():
         if evento['data']==Alterar_Data and evento['hora']==Alterar_Hora:
             achou=True
             linha()
-            new_descricao=input('Digite a nova descrição: ')
+            new_descricao=input('Digite a nova descrição: ') 
             new_duracao=input('Nova duração: ')
-            evento['descricao']=new_descricao
+            evento['descricao']=new_descricao #substituindo os valores do dicionário pelas novas informações digitadas pelo usuário.
             evento['duracao']=new_duracao
             print('O compromisso foi alterado com sucesso!!!')
             print('')
@@ -103,9 +105,11 @@ def Excluir():
     print('')
     indice=None
     achou=False
-    for i, evento in enumerate(agenda):
+    for i, evento in enumerate(agenda): #Inicia um loop for que percorre todos os elementos da lista "agenda",
+    # atribuindo o índice de cada elemento na variável "i" e o valor do elemento na variável "evento". A função enumerate()
+    # dá acesso ao índice dos elementos da lista. 
         if evento['data']==Exclui_Data and evento['hora']==Exclui_Hora:
-            indice=i
+            indice=i #guarda na variável o índice da lista referente ao evento que será excluído
             achou=True
             
     if indice is not None:
@@ -117,7 +121,7 @@ def Excluir():
         print('Não encontrei esse compromisso :( ')
         print('')
     
-def Listar():
+def Listar(): #função mais simples de todas. Apenas passa por todos os compromissos da agenda e printa todos.
     if agendaVazia():
         return
     else:
@@ -135,7 +139,7 @@ while True:
     linha()
     print("[1] INCLUIR \n[2] CONSULTAR \n[3] ALTERAR \n[4] EXCLUIR \n[5] LISTAR TODOS \n[6] SAIR")
     linha()
-    Menu_Op = input(" : ")
+    Menu_Op = input(" : ") #deixei o número do menu como string. Assim se o usuário acidentalmente digitar uma letra no menu, o programa não dará erro, e os compromissos inseridos anteriormente não serão perdidos.
     linha()
     if Menu_Op == '1':
         Incluir()
