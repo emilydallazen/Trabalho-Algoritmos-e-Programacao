@@ -1,8 +1,9 @@
 
 #Funções auxiliares: criadas para serem utilizadas dentro das funções dos menus.
 def linha():
-    print(48*'=')
+    print(50*'=')
 
+#adicionado no início de todas as funções do menu, com exceção da função Incluir.
 def agendaVazia():
    if len(agenda)==0:
         print('Zero compromissos. Sua agenda está vazia!')
@@ -27,10 +28,12 @@ def Incluir():
     if verificaAgenda(agenda, data, hora):
        print('------Ops, voce já tem compromisso!----')
        return
+    #se a função verificaAgenda retornar como True, é porque já existe um compromisso na mesma data e hora. Então não será dado o append do compromisso na lista da agenda.
     else:
         evento={'data': data, 'hora': hora, 'duracao': duracao, 'descricao': descricao}
-        agenda.append(evento)
-        print('-----O compromisso foi marcado com sucesso! :)----- ')
+        #definindo o dicionário Evento, composto por data, hora, duração e descrição.
+        agenda.append(evento) #inserindo o evento na agenda.
+        print('O compromisso foi marcado com sucesso! :) ')
         
            
 
@@ -38,7 +41,7 @@ def Consultar():
     if agendaVazia():
        return
     print('1 - Consultar pela data e hora \n2 - Consultar somente pela data')
-    Consultar_Op=int(input(": ")) 
+    Consultar_Op=int(input(" : ")) 
     if Consultar_Op == 1:
         Consultar_Data=input('Data: ')
         Consultar_Hora=input('Hora: ')
@@ -121,27 +124,28 @@ def Listar():
 #Programa Principal
 
 agenda=[]
-print('---------------------AGENDA---------------------')
+print('----------------------AGENDA----------------------')
 while True:
     linha()
     print("[1] INCLUIR \n[2] CONSULTAR \n[3] ALTERAR \n[4] EXCLUIR \n[5] LISTAR TODOS \n[6] SAIR")
     linha()
-    Menu_Op = int(input(" :"))
-    if Menu_Op == 1:
+    Menu_Op = input(" : ")
+    linha()
+    if Menu_Op == '1':
         Incluir()
-    elif Menu_Op==2:
+    elif Menu_Op=='2':
         Consultar()
-    elif Menu_Op==3:
+    elif Menu_Op=='3':
         Alterar()
-    elif Menu_Op == 4:
+    elif Menu_Op == '4':
         Excluir()
-    elif Menu_Op==5:
+    elif Menu_Op=='5':
         Listar()
-    elif Menu_Op==6:
+    elif Menu_Op=='6':
         break
     else:
         print('Opção inválida!')
-        
+print('*******************FIM******************')
     
   
 
